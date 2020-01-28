@@ -6,7 +6,7 @@ networks:
 
 services:
   dockerapi:
-    image: ${DOCKER_REGISTRY-}dockerapi
+    image: dockerapi:latest
     depends_on:
       - "postgres_image"
     build:
@@ -26,7 +26,7 @@ services:
     restart: always
     volumes:
       - db_volume:/var/lib/postgresql/data
-      - ./dbscripts/seed.txt :/docker-entrypoint-initdb.d/seed.sql
+      - ./dbscripts/seed.sql :/docker-entrypoint-initdb.d/seed.sql
     environment:
       POSTGRES_USER: "bloguser"
       POSTGRES_PASSWORD: "bloguser"
@@ -35,3 +35,6 @@ services:
       - dockerapi-dev
 volumes:
   db_volume:
+         
+    
+     

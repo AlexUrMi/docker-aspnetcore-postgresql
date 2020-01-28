@@ -4,7 +4,16 @@ A simple ASP.NET Core sample web application using .Net Web Api Core and Postgre
 ## Prerequisites
 1. [Docker](https://www.docker.com/)
 
-## Steps
+##New steps
+Project was changed to startup containers from VS2019.
+seed.sql was changed to seed.txt to prevent sql error on start project
+
+Navigate to https://localhost:32790/swagger/index.html
+
+##Plans
+And it would be greate to connect to postgrest database to view a data.
+
+## Old Steps
 1. `git clone https://github.com/rajvirtual/docker-aspnetcore-postgresql.git`
 
 2. `cd docker-aspnetcore-postgresql`
@@ -14,3 +23,5 @@ A simple ASP.NET Core sample web application using .Net Web Api Core and Postgre
 4. `docker-compose up`
 
 5.  Navigate to http://localhost:8000/swagger
+
+
